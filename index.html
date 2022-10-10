@@ -1,0 +1,547 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="dist/minified.css" rel="stylesheet">
+    <script>if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+            document.documentElement.classList.add('dark')
+        } else {
+            document.documentElement.classList.remove('dark')
+        }</script>
+</head>
+
+<body>
+    <!------------------------- Header Start------------------------------->
+    <header class="bg-transparent absolute top-0 left-0 w-full flex items-center z-50">
+        <div class="container">
+            <div class="flex items-center justify-between relative">
+                <div class="px-4">
+                    <a href="#" class="font-bold text-lg text-primary dark:text-violet-500 block py-6">Enbies</a>
+                </div>
+
+                <div class="flex items-center px-4">
+                    <button id="hamburger" name="hamburger" button="button" class="block absolute right-4 lg:hidden">
+                        <span class="hamburger-line transition duration-300 ease-in-out origin-top-left"></span>
+                        <span class="hamburger-line transition duration-300 ease-in-out"></span>
+                        <span class="hamburger-line transition duration-300 ease-in-out origin-bottom-left"></span>
+                    </button>
+
+                    <nav id="nav-menu"
+                        class="hidden absolute py-5 bg-white shadow-lg rounded-lg max-w-[250px] w-full right-6 top-full lg:block lg:static lg:bg-transparent lg:dark:bg-transparent lg:max-w-full  lg:shadow-none lg:rounded-none dark:bg-dark dark:shadow-slate-700">
+                        <ul class="block lg:flex">
+                            <li class="group">
+                                <a href="#"
+                                    class="text-base text-dark  py-2 mx-8 flex group-hover:text-primary dark:text-white">Home</a>
+                            </li>
+                            <li class="group">
+                                <a href="#about"
+                                    class="text-base text-dark  py-2 mx-8 flex group-hover:text-primary dark:text-white">About</a>
+                            </li>
+                            <li class="group">
+                                <a href="#portfolio"
+                                    class="text-base text-dark  py-2 mx-8 flex  group-hover:text-primary dark:text-white">Portfolio</a>
+                            </li>
+                            <li class="group">
+                                <a href="#clients"
+                                    class="text-base text-dark py-2 mx-8  flex group-hover:text-primary dark:text-white">Clients</a>
+                            </li>
+                            <li class="group">
+                                <a href="#blog"
+                                    class="text-base text-dark  py-2 mx-8  flex group-hover:text-primary dark:text-white">Blog</a>
+                            </li>
+                            <li class="group">
+                                <a href="#contact"
+                                    class="text-base text-dark  py-2 mx-8  flex group-hover:text-primary dark:text-white">Contact</a>
+                            </li>
+                            <li class="flex pl-8 mt-2 group">
+                                <button class="flex" id="dark-button">
+                                    <span class=" text-sm text-dark dark:text-white">Light</span>
+                                    <input type="checkbox" class="hidden" id="dark-toggle">
+                                    <label for="dark-toggle">
+                                        <div
+                                            class="flex w-8 h-5 rounded-full bg-primary items-center cursor-pointer pl-[2px] mx-1">
+                                            <div
+                                                class="toggle-circle w-4 h-4 bg-secondary dark:bg-white rounded-full transition duration-300 ease-in-out">
+                                            </div>
+                                        </div>
+                                    </label>
+                                    <span class="mr-2 text-sm text-dark dark:text-white">Dark</span>
+                                </button>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!------------------------- Header End ---------------->
+
+    <!--------------------- Hero Start ------------------>
+    <section id="home" class="pt-36  bg-slate-200 dark:bg-slate-700">
+        <div class="container">
+            <div class="flex flex-wrap">
+                <div class="w-full self-center px-4 lg:w-1/2">
+                    <h1 class="text-base font-semibold text-dark dark:text-white md:text-xl">Halo 🖐,
+                        saya adalah<span
+                            class="block font-bold text-primary dark:text-violet-500 text-4xl my-1 lg:text-5xl">Nicolas
+                            Batara Sijabat</span></h1>
+                    <h2 class="font-medium text-primary dark:text-violet-500 text-lg mb-5 lg:text-2xl"> E-sport athlete
+                        <span class="text-highlight dark:text-white"> & Front End Developer</span>
+                    </h2>
+                    <p class="font-medium text-secondary mb-10 leading-relaxed"> Saya pernah menjadi seorang <span
+                            class="text-primary dark:text-violet-500">E-sport
+                            athlete</span> dari tahun <span class="text-primary dark:text-violet-500"> 2012-2020</span>,
+                        setelah itu saya
+                        belajar menjadi <span class=" text-highlight dark:text-white"> Front End Developer</span> dan
+                        sekarang ingin
+                        <span class="text-highlight dark:text-white">menjadi Full Stack
+                            Developer</span>
+                    </p>
+
+                    <a href="#"
+                        class="text-base font-semibold text-white bg-violet-800 py-3 px-8  rounded-full hover:shadow-lg hover:opacity-80 transition duration-300 ease">Contact
+                        Me</a>
+                </div>
+
+                <div class="w-full self-end px-4 lg:w-1/2">
+                    <div class="relative lg:mt-0 lg:right-0 my-20 lg:ml-20">
+                        <img src="dist/me-no-bg.png" alt="My Picture"
+                            class="max-w-full mx-auto rounded-full relative z-10 " width="350">
+                        <span class="absolute -bottom-12 left-1/2 -translate-x-1/2  md:scale-125">
+                            <svg width="450" height="450" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+                                <path fill="#8A3FFC"
+                                    d="M47.5,-26.9C59.9,-6,67.1,18.5,58.4,33.8C49.6,49.1,24.8,55.2,-1.6,56.1C-27.9,57.1,-55.9,52.7,-66.2,36.5C-76.6,20.3,-69.3,-7.7,-55.3,-29.6C-41.3,-51.4,-20.7,-67.1,-1.6,-66.2C17.6,-65.3,35.1,-47.8,47.5,-26.9Z"
+                                    transform="translate(100 100) scale(1.1)" />
+                            </svg>
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--------------------- Hero End -->
+
+
+    <!--------------------- About Start ---------------------------->
+    <section id="about" class="pt-36 pb-32 dark:bg-slate-800">
+        <div class="container">
+            <div class="flex flex-wrap">
+                <div class="w-full px-4 mb-10 lg:w-1/2">
+                    <h4 class="font-bold uppercase text-primary text-xl mb-3 lg:text-2xl">
+                        About me</h4>
+                    <h2 class="text-dark dark:text-white text-3xl mb-5 max-w-xl lg:text-4xl">I'm a Front
+                        End Developer
+                    </h2>
+                    <p class="font-medium text-base text-secondary max-w-xl lg:text-lg">Saya telah mengerjakan beberapa
+                        proyek <span class="text-highlight dark:text-white">Front End Developer</span> dan ingin mencari
+                        tempat bekerja
+                        yang dapat menantang diri saya untuk <span class="text-highlight dark:text-white"> berkembang
+                        </span>lebih
+                        jauh lagi</p>
+                </div>
+                <div class="w-full px-4 lg:w-1/2">
+                    <h3 class="font-bold text-primary dark:text-violet-500 text-2xl mb-4 lg:text-3xl lg:pt-10">Social
+                        Media</h3>
+                    <p class="font-medium text-base text-secondary mb-6 lg:text-lg">Follow social mediaku dibawah ini
+                        untuk
+                        mengetahui info sehari-sehariku </p>
+                    <div class="flex items-center">
+                        <!-------------------- FACEBOOK -->
+                        <a href="https://facebook.com/NicolasBataraS" target="_blank"
+                            class="social hover:border-facebook  text-facebook">
+                            <svg width="30" role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"
+                                class="fill-current">
+                                <title>Facebook</title>
+                                <path
+                                    d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z" />
+                            </svg>
+                        </a>
+                        <!----------------------- INSTAGRAM -->
+                        <a href="https://instagam.com/NicolasBataraS" target="_blank"
+                            class="social text-white hover:border-y-pink-500 hover:border-x-indigo-500">
+                            <svg role="img" width="30" class="fill-current instagram rounded-lg" viewBox="0 0 24 24"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <title>Instagram</title>
+                                <path
+                                    d="M12 0C8.74 0 8.333.015 7.053.072 5.775.132 4.905.333 4.14.63c-.789.306-1.459.717-2.126 1.384S.935 3.35.63 4.14C.333 4.905.131 5.775.072 7.053.012 8.333 0 8.74 0 12s.015 3.667.072 4.947c.06 1.277.261 2.148.558 2.913.306.788.717 1.459 1.384 2.126.667.666 1.336 1.079 2.126 1.384.766.296 1.636.499 2.913.558C8.333 23.988 8.74 24 12 24s3.667-.015 4.947-.072c1.277-.06 2.148-.262 2.913-.558.788-.306 1.459-.718 2.126-1.384.666-.667 1.079-1.335 1.384-2.126.296-.765.499-1.636.558-2.913.06-1.28.072-1.687.072-4.947s-.015-3.667-.072-4.947c-.06-1.277-.262-2.149-.558-2.913-.306-.789-.718-1.459-1.384-2.126C21.319 1.347 20.651.935 19.86.63c-.765-.297-1.636-.499-2.913-.558C15.667.012 15.26 0 12 0zm0 2.16c3.203 0 3.585.016 4.85.071 1.17.055 1.805.249 2.227.415.562.217.96.477 1.382.896.419.42.679.819.896 1.381.164.422.36 1.057.413 2.227.057 1.266.07 1.646.07 4.85s-.015 3.585-.074 4.85c-.061 1.17-.256 1.805-.421 2.227-.224.562-.479.96-.899 1.382-.419.419-.824.679-1.38.896-.42.164-1.065.36-2.235.413-1.274.057-1.649.07-4.859.07-3.211 0-3.586-.015-4.859-.074-1.171-.061-1.816-.256-2.236-.421-.569-.224-.96-.479-1.379-.899-.421-.419-.69-.824-.9-1.38-.165-.42-.359-1.065-.42-2.235-.045-1.26-.061-1.649-.061-4.844 0-3.196.016-3.586.061-4.861.061-1.17.255-1.814.42-2.234.21-.57.479-.96.9-1.381.419-.419.81-.689 1.379-.898.42-.166 1.051-.361 2.221-.421 1.275-.045 1.65-.06 4.859-.06l.045.03zm0 3.678c-3.405 0-6.162 2.76-6.162 6.162 0 3.405 2.76 6.162 6.162 6.162 3.405 0 6.162-2.76 6.162-6.162 0-3.405-2.76-6.162-6.162-6.162zM12 16c-2.21 0-4-1.79-4-4s1.79-4 4-4 4 1.79 4 4-1.79 4-4 4zm7.846-10.405c0 .795-.646 1.44-1.44 1.44-.795 0-1.44-.646-1.44-1.44 0-.794.646-1.439 1.44-1.439.793-.001 1.44.645 1.44 1.439z" />
+                            </svg>
+                        </a>
+                        <!-- ---------------------TWITTER -->
+                        <a href="https://twitter.com/NicolasBatara" target="_blank"
+                            class="social hover:border-twitter  text-twitter">
+                            <svg role="img" width="30" class="fill-current" viewBox="0 0 24 24"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <title>Twitter</title>
+                                <path
+                                    d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085 4.936 4.936 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0024 4.59z" />
+                            </svg>
+                        </a>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--------------------- About End ---------------------------->
+
+    <!--------------------- Portfolio Start ---------------------------->
+    <section id="portfolio" class="pt-36 pb-16 bg-slate-200 dark:bg-slate-700">
+        <div class="container">
+            <div class="w-full-px-4">
+                <div class=" mx-auto text-center mb-16">
+                    <h4 class="font-semibold text-primary dark:text-violet-500 text-2xl lg:text-4xl mb-2">Portfolio</h4>
+                    <h2 class="font-bold text-dark dark:text-white text-xl lg:text-3xl mb-4">My
+                        Achievments</h2>
+                    <p class="font-medium text-secondary text-md lg:text-xl">Berikut ini adalah beberapa achievments
+                        dari semua
+                        achievments yang pernah saya dapatkan</p>
+                </div>
+            </div>
+            <!---------------------------- 1st achievment ---------------------------->
+            <div class="w-full px-4 flex flex-wrap justify-center">
+                <div class="mb-12 p-4 md:w-1/2">
+                    <div class="rounded-md shadow-md overflow-hidden">
+                        <img src="/portfolio/1.jpg" width="w-full" alt="first LAN">
+                    </div>
+                    <h3 class="font-semibold text-dark dark:text-white mt-2 tracking-wider">
+                        Heroes of Newerth : My first LAN tournament
+                    </h3>
+
+                    <span class="text-red-600 block">
+                        <svg role="img" class="fill-current inline-block" width="20" viewBox="0 0 24 24"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <title>Google Maps</title>
+                            <path
+                                d="M19.527 4.799c1.212 2.608.937 5.678-.405 8.173-1.101 2.047-2.744 3.74-4.098 5.614-.619.858-1.244 1.75-1.669 2.727-.141.325-.263.658-.383.992-.121.333-.224.673-.34 1.008-.109.314-.236.684-.627.687h-.007c-.466-.001-.579-.53-.695-.887-.284-.874-.581-1.713-1.019-2.525-.51-.944-1.145-1.817-1.79-2.671L19.527 4.799zM8.545 7.705l-3.959 4.707c.724 1.54 1.821 2.863 2.871 4.18.247.31.494.622.737.936l4.984-5.925-.029.01c-1.741.601-3.691-.291-4.392-1.987a3.377 3.377 0 0 1-.209-.716c-.063-.437-.077-.761-.004-1.198l.001-.007zM5.492 3.149l-.003.004c-1.947 2.466-2.281 5.88-1.117 8.77l4.785-5.689-.058-.05-3.607-3.035zM14.661.436l-3.838 4.563a.295.295 0 0 1 .027-.01c1.6-.551 3.403.15 4.22 1.626.176.319.323.683.377 1.045.068.446.085.773.012 1.22l-.003.016 3.836-4.561A8.382 8.382 0 0 0 14.67.439l-.009-.003zM9.466 5.868L14.162.285l-.047-.012A8.31 8.31 0 0 0 11.986 0a8.439 8.439 0 0 0-6.169 2.766l-.016.018 3.665 3.084z" />
+                        </svg>
+                        <h4 class=" text-slate-500 tracking-tighter inline">Ritter Cybercafe, Grogol, Jakarta
+                            Barat, Indonesia
+                        </h4>
+                    </span>
+
+                </div>
+                <!---------------------------- 2nd achievment ---------------------------->
+                <div class="mb-12 p-4 md:w-1/2">
+                    <div class="rounded-md shadow-md overflow-hidden">
+                        <img src="portfolio/2.jpg" class="w-full" alt="Garena Star League">
+                    </div>
+                    <h3 class="font-semibold text-dark dark:text-white mt-2 tracking-tighter">
+                        Heroes of Newerth : Indonesia Representative in Garena Star League
+                        @Thailand, Bangkok
+                    </h3>
+
+                    <span class="text-red-600">
+                        <svg role="img" class="fill-current inline-block" width="20" viewBox="0 0 24 24"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <title>Google Maps</title>
+                            <path
+                                d="M19.527 4.799c1.212 2.608.937 5.678-.405 8.173-1.101 2.047-2.744 3.74-4.098 5.614-.619.858-1.244 1.75-1.669 2.727-.141.325-.263.658-.383.992-.121.333-.224.673-.34 1.008-.109.314-.236.684-.627.687h-.007c-.466-.001-.579-.53-.695-.887-.284-.874-.581-1.713-1.019-2.525-.51-.944-1.145-1.817-1.79-2.671L19.527 4.799zM8.545 7.705l-3.959 4.707c.724 1.54 1.821 2.863 2.871 4.18.247.31.494.622.737.936l4.984-5.925-.029.01c-1.741.601-3.691-.291-4.392-1.987a3.377 3.377 0 0 1-.209-.716c-.063-.437-.077-.761-.004-1.198l.001-.007zM5.492 3.149l-.003.004c-1.947 2.466-2.281 5.88-1.117 8.77l4.785-5.689-.058-.05-3.607-3.035zM14.661.436l-3.838 4.563a.295.295 0 0 1 .027-.01c1.6-.551 3.403.15 4.22 1.626.176.319.323.683.377 1.045.068.446.085.773.012 1.22l-.003.016 3.836-4.561A8.382 8.382 0 0 0 14.67.439l-.009-.003zM9.466 5.868L14.162.285l-.047-.012A8.31 8.31 0 0 0 11.986 0a8.439 8.439 0 0 0-6.169 2.766l-.016.018 3.665 3.084z" />
+                        </svg>
+                        <h4 class=" text-slate-500 tracking-tighter inline">PT Garena Indonesia, Central Park, Jakarta
+                            Barat.
+                        </h4>
+                    </span>
+                </div>
+                <!---------------------------- 3rd achievment ---------------------------->
+                <div class="mb-12 p-4 md:w-1/2">
+                    <div class="rounded-md shadow-md">
+                        <img src="portfolio/4.jpg" class="w-full" alt="Evos">
+                    </div>
+                    <h3 class="font-semibold text-dark dark:text-white mt-2 tracking-wider">
+                        DotA 2 : My first DotA 2 E-sport Team known as Evos
+                    </h3>
+
+                    <span class=" text-red-600">
+                        <svg role="img" class="fill-current inline-block" width="20" viewBox="0 0 24 24"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <title>Google Maps</title>
+                            <path
+                                d="M19.527 4.799c1.212 2.608.937 5.678-.405 8.173-1.101 2.047-2.744 3.74-4.098 5.614-.619.858-1.244 1.75-1.669 2.727-.141.325-.263.658-.383.992-.121.333-.224.673-.34 1.008-.109.314-.236.684-.627.687h-.007c-.466-.001-.579-.53-.695-.887-.284-.874-.581-1.713-1.019-2.525-.51-.944-1.145-1.817-1.79-2.671L19.527 4.799zM8.545 7.705l-3.959 4.707c.724 1.54 1.821 2.863 2.871 4.18.247.31.494.622.737.936l4.984-5.925-.029.01c-1.741.601-3.691-.291-4.392-1.987a3.377 3.377 0 0 1-.209-.716c-.063-.437-.077-.761-.004-1.198l.001-.007zM5.492 3.149l-.003.004c-1.947 2.466-2.281 5.88-1.117 8.77l4.785-5.689-.058-.05-3.607-3.035zM14.661.436l-3.838 4.563a.295.295 0 0 1 .027-.01c1.6-.551 3.403.15 4.22 1.626.176.319.323.683.377 1.045.068.446.085.773.012 1.22l-.003.016 3.836-4.561A8.382 8.382 0 0 0 14.67.439l-.009-.003zM9.466 5.868L14.162.285l-.047-.012A8.31 8.31 0 0 0 11.986 0a8.439 8.439 0 0 0-6.169 2.766l-.016.018 3.665 3.084z" />
+                        </svg>
+                        <h4 class=" text-slate-500 tracking-tighter inline">Evos Gaming House, Pantai Indah Kapuk,
+                            Jakarta
+                            Utara
+                        </h4>
+                    </span>
+                </div>
+                <!---------------------------- 4th achievment ---------------------------->
+                <div class="mb-12 p-4 md:w-1/2">
+                    <div class="rounded-md shadow-md overflow-hidden">
+                        <img src="/portfolio/5.jpg" width="w-full" alt="1st place IGC">
+                    </div>
+                    <h3 class="font-semibold text-dark dark:text-white mt-2 tracking-wider">
+                        DotA 2 : 1st place Indonesia Games Championship
+                    </h3>
+
+                    <span class="flex text-red-600">
+                        <svg role="img" class="fill-current " width="20" viewBox="0 0 24 24"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <title>Google Maps</title>
+                            <path
+                                d="M19.527 4.799c1.212 2.608.937 5.678-.405 8.173-1.101 2.047-2.744 3.74-4.098 5.614-.619.858-1.244 1.75-1.669 2.727-.141.325-.263.658-.383.992-.121.333-.224.673-.34 1.008-.109.314-.236.684-.627.687h-.007c-.466-.001-.579-.53-.695-.887-.284-.874-.581-1.713-1.019-2.525-.51-.944-1.145-1.817-1.79-2.671L19.527 4.799zM8.545 7.705l-3.959 4.707c.724 1.54 1.821 2.863 2.871 4.18.247.31.494.622.737.936l4.984-5.925-.029.01c-1.741.601-3.691-.291-4.392-1.987a3.377 3.377 0 0 1-.209-.716c-.063-.437-.077-.761-.004-1.198l.001-.007zM5.492 3.149l-.003.004c-1.947 2.466-2.281 5.88-1.117 8.77l4.785-5.689-.058-.05-3.607-3.035zM14.661.436l-3.838 4.563a.295.295 0 0 1 .027-.01c1.6-.551 3.403.15 4.22 1.626.176.319.323.683.377 1.045.068.446.085.773.012 1.22l-.003.016 3.836-4.561A8.382 8.382 0 0 0 14.67.439l-.009-.003zM9.466 5.868L14.162.285l-.047-.012A8.31 8.31 0 0 0 11.986 0a8.439 8.439 0 0 0-6.169 2.766l-.016.018 3.665 3.084z" />
+                        </svg>
+                        <a href="https://goo.gl/maps/EMoF2PnxRMs2XUin8" class=" text-slate-500 tracking-tighter">Kartika
+                            Expo, Balai Kartini, Jakarta
+                        </a>
+                    </span>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!--------------------- Portfolio End ---------------------------->
+
+
+
+    <!--------------------- Clients Start ---------------------------->
+    <section id="clients" class="pt-36 pb-32  dark:bg-slate-900">
+        <div class="container">
+            <div class="w-full px-4">
+                <div class="mx-auto text-center mb-16">
+                    <h4 class="font-semibold text-primary dark:text-violet-500 text-2xl sm:text-3xl lg:text-4xl mb-2">
+                        Clients</h4>
+                    <h2 class="font-bold text-white dark:text-dark text-xl sm:text-2xl lg:text-3xl mb-4">Yang pernah
+                        bekerja sama</h2>
+                    <p class="font-medium text-secondary text-md lg:text-xl">Lorem ipsum dolor, sit amet consectetur
+                        adipisicing
+                        elit. Eveniet in sint quidem?</p>
+                </div>
+            </div>
+
+            <div class="w-full px-4">
+                <div class="flex flex-wrap items-center justify-center">
+                    <a href="https://www.evos.gg/"
+                        class="max-w-[120px] mx-4 py-4 grayscale opacity-60 transition duration-500 hover:grayscale-0 hover:opacity-100 lg:mx-6 xl:mx-8">
+                        <img src="clients/evos.svg" alt="evos">
+                    </a>
+                    <a href="https://boomesports.gg/"
+                        class="max-w-[120px] mx-4 py-4 grayscale opacity-60 transition duration-500 hover:grayscale-0 hover:opacity-100 lg:mx-6 xl:mx-8">
+                        <img src="clients/boom.svg" alt="boom">
+                    </a>
+                    <a href="https://teamrrq.com/"
+                        class="max-w-[120px] mx-4 py-4 grayscale opacity-60 transition duration-500 hover:grayscale-0 hover:opacity-100 lg:mx-6 xl:mx-8">
+                        <img src="clients/rrq.svg" alt="rrq">
+                    </a>
+                    <a href="https://www.instagram.com/alteregoesports"
+                        class="max-w-[120px] mx-4 py-4 grayscale opacity-60 transition duration-500 hover:grayscale-0 hover:opacity-100 lg:mx-6 xl:mx-8">
+                        <img src="clients/alter-ego.svg" alt="alter-ego">
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--------------------- Clients End ---------------------------->
+
+
+    <!--------------------- Blog Start ---------------------------->
+    <section id="blog" class="pt-36 pb-32 bg-slate-200 dark:bg-slate-700">
+        <div class="container">
+            <div class="w-full px-4">
+                <div class="max-w-xl mx-auto text-center mb-16 ">
+                    <h2 class="font-bold text-dark dark:text-white text-3xl mb-4 sm:text-4xl lg:text-lg"> Blog
+                    </h2>
+                    <p class="font-medium text-md text-secondary md:text-lg k">Lorem ipsum dolor sit amet
+                        consectetur,
+                        adipisicing elit. Ipsum qui porro repellendus quos!</p>
+                </div>
+            </div>
+
+            <div class="flex flex-wrap ">
+                <div class="w-full px-4 lg:w-1/2 xl:w-1/3 " id="programming">
+                    <div class="bg-white rounded-xl shadow-lg overflow-hidden mb-10">
+                        <img src="https://source.unsplash.com/360x200?programming" alt="Programming" class="w-full">
+                        <div class="py-8 px-6 dark:bg-dark ">
+                            <h3> <a href=""
+                                    class="block mb-3 font-semibold text-xl text-dark dark:text-white hover:text-primary truncate">Tips
+                                    Belajar Programming</a>
+                            </h3>
+                            <p class="font-medium text-base text-secondary mb-4">Lorem ipsum dolor sit amet consectetur
+                                adipisicing elit. Maxime architecto est error temporibus!.</p>
+                            <a href=""
+                                class="font-medium text-sm bg-primary text-white py-2 px-4 rounded-lg hover:opacity-80">See
+                                More...</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="w-full px-4 lg:w-1/2 xl:w-1/3" id="atlit">
+                    <div class="bg-white rounded-xl shadow-lg overflow-hidden mb-10 ">
+                        <img src="https://source.unsplash.com/360x200?esport+athlete" alt="Programming" class="w-full">
+                        <div class="py-8 px-6 dark:bg-dark">
+                            <h3> <a href=""
+                                    class="block mb-3 font-semibold text-xl text-dark dark:text-white hover:text-primary truncate">Mau
+                                    Jadi Atlit yang Terhebat ? Begini caranya ...</a>
+                            </h3>
+                            <p class="font-medium text-base text-secondary mb-4">Lorem ipsum, dolor sit amet consectetur
+                                adipisicing elit. Delectus, debitis.</p>
+                            <a href=""
+                                class="font-medium text-sm bg-primary text-white py-2 px-4 rounded-lg hover:opacity-80">See
+                                More...</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="w-full px-4 lg:w-1/2 xl:w-1/3 lg:mx-auto" id="gamer">
+                    <div class="bg-white rounded-xl shadow-lg overflow-hidden mb-10">
+                        <img src="https://source.unsplash.com/360x200?gaming" alt="E-sport" class="w-full">
+                        <div class="py-8 px-6 dark:bg-dark">
+                            <h3> <a href=""
+                                    class="block mb-3 font-semibold text-xl text-dark dark:text-white hover:text-primary truncate">Gamer
+                                    Tapi Dapet Cuan ?</a>
+                            </h3>
+                            <p class="font-medium text-base text-secondary mb-4">Lorem ipsum dolor sit amet consectetur
+                                adipisicing elit. Iure nobis voluptatum ipsum magni.</p>
+                            <a href=""
+                                class="font-medium text-sm bg-primary text-white py-2 px-4 rounded-lg hover:opacity-80">See
+                                More...</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+    <!--------------------- Blog End ---------------------------->
+
+    <!--------------------- Contact Start ---------------------------->
+    <section id="contact" class="pt-36 pb-32 bg-slate-200 dark:bg-slate-700">
+        <div class="container">
+            <div class="w-full px-4">
+                <div class="max-w-xl mx-auto text-center mb-16">
+                    <h2 class="font-bold text-dark dark:text-white text-3xl mb-4 sm:text-4xl lg:text-lg">Contact Me
+                    </h2>
+
+                    <p class="font-medium text-md text-secondary md:text-lg">Lorem ipsum dolor sit amet consectetur
+                        adipisicing elit. Iste, et.</p>
+                </div>
+            </div>
+
+            <form>
+                <div class="w-full lg:w-2/3 lg:mx-auto xl:w-1/2">
+                    <div class="w-full px-4 mb-8">
+                        <label for="name" class="text-base text-primary dark:text-violet-500 font-bold">Name</label>
+                        <input type="text" id="name"
+                            class="w-full bg-slate-100 text-dark dark:bg-slate-800 dark:text-white p-3 rounded-md focus:outline-none focus:ring-1 focus:ring-primary ">
+                    </div>
+                    <div class="w-full px-4 mb-8">
+                        <label for="email" class="text-base text-primary dark:text-violet-500 font-bold">Email</label>
+                        <input type="email" id="email"
+                            class="w-full bg-slate-100 text-dark dark:bg-slate-800 dark:text-white p-3 rounded-md focus:outline-none focus:ring-1 focus:ring-primary ">
+                    </div>
+                    <div class="w-full px-4 mb-8">
+                        <label for="message"
+                            class="text-base text-primary dark:text-violet-500 font-bold">Messages</label>
+                        <textarea id="message" name="message"
+                            class="w-full bg-slate-100 text-dark dark:bg-slate-800 dark:text-white p-3 rounded-md focus:outline-none focus:ring-1 focus:ring-primary "></textarea>
+                        <div class="w-full px-4 mt-2">
+                            <button
+                                class="text-base font-semibold bg-primary py-3 px-8 rounded-full text-white w-full hover:opacity-80 hover:shadow-lg transition duration-500 lg:w-1/2">Send</button>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </section>
+    <!--------------------- Contact End ---------------------------->
+
+    <!--------------------- Footer Start ---------------------------->
+    <footer class="pt-24 pb-12 dark:bg-dark">
+        <div class="container">
+            <div class="flex flex-wrap">
+                <div class="w-full px-4 mb-12 text-slate-800 dark:text-slate-400 font-medium md:w-1/3">
+                    <h2 class="font-bold text-4xl text-slate-700 dark:text-slate-300 mb-5">Nicolas Batara</h2>
+                    <p>enbies00@gmail.com</p>
+                    <p>Jl.Gunung Batu no 777</p>
+                    <p>Bandung</p>
+                </div>
+                <div class="w-full px-4 mb-12 md:w-1/3 ">
+                    <h3 class="font-semibold text-xl text-slate-700 dark:text-slate-300 mb-5">
+                        Blogs
+                    </h3>
+                    <ul class="text-slate-800 dark:text-slate-400 ">
+                        <li><a href="#programming" class="inline-block text-base hover:text-primary">Programming</a>
+                        </li>
+                        <li><a href="#atlit" class="inline-block text-base hover:text-primary">Atlit</a></li>
+                        <li><a href="#gamer" class="inline-block text-base hover:text-primary">Gamer</a></li>
+                    </ul>
+                </div>
+
+                <div class="w-full px-4 mb-12 md:w-1/3">
+                    <h3 class="font-semibold text-xl text-slate-700 dark:text-slate-300 mb-5">
+                        Navigation Links
+                    </h3>
+                    <ul class="text-slate-800 dark:text-slate-400 ">
+                        <li><a href="#" class="inline-block text-base hover:text-primary">Home</a></li>
+                        <li><a href="#about" class="inline-block text-base hover:text-primary">About</a></li>
+                        <li><a href="#portfolio" class="inline-block text-base hover:text-primary">Portfolio</a></li>
+                        <li><a href="#clients" class="inline-block text-base hover:text-primary">Clients</a></li>
+                        <li><a href="#blog" class="inline-block text-base hover:text-primary">Blog</a></li>
+                        <li><a href="#contact" class="inline-block text-base hover:text-primary">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="w-full pt-10 border-t border-slate-800">
+                <div class="flex items-center justify-center mb-5">
+                    <!-------------------- FACEBOOK -->
+                    <a href="https://facebook.com/NicolasBataraS" target="_blank"
+                        class="social hover:border-facebook  text-facebook">
+                        <svg width="30" role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"
+                            class="fill-current">
+                            <title>Facebook</title>
+                            <path
+                                d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z" />
+                        </svg>
+                    </a>
+                    <!----------------------- INSTAGRAM -->
+                    <a href="https://instagam.com/NicolasBataraS" target="_blank"
+                        class="social text-white hover:border-y-pink-500 hover:border-x-indigo-500">
+                        <svg role="img" width="30" class="fill-current instagram rounded-lg" viewBox="0 0 24 24"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <title>Instagram</title>
+                            <path
+                                d="M12 0C8.74 0 8.333.015 7.053.072 5.775.132 4.905.333 4.14.63c-.789.306-1.459.717-2.126 1.384S.935 3.35.63 4.14C.333 4.905.131 5.775.072 7.053.012 8.333 0 8.74 0 12s.015 3.667.072 4.947c.06 1.277.261 2.148.558 2.913.306.788.717 1.459 1.384 2.126.667.666 1.336 1.079 2.126 1.384.766.296 1.636.499 2.913.558C8.333 23.988 8.74 24 12 24s3.667-.015 4.947-.072c1.277-.06 2.148-.262 2.913-.558.788-.306 1.459-.718 2.126-1.384.666-.667 1.079-1.335 1.384-2.126.296-.765.499-1.636.558-2.913.06-1.28.072-1.687.072-4.947s-.015-3.667-.072-4.947c-.06-1.277-.262-2.149-.558-2.913-.306-.789-.718-1.459-1.384-2.126C21.319 1.347 20.651.935 19.86.63c-.765-.297-1.636-.499-2.913-.558C15.667.012 15.26 0 12 0zm0 2.16c3.203 0 3.585.016 4.85.071 1.17.055 1.805.249 2.227.415.562.217.96.477 1.382.896.419.42.679.819.896 1.381.164.422.36 1.057.413 2.227.057 1.266.07 1.646.07 4.85s-.015 3.585-.074 4.85c-.061 1.17-.256 1.805-.421 2.227-.224.562-.479.96-.899 1.382-.419.419-.824.679-1.38.896-.42.164-1.065.36-2.235.413-1.274.057-1.649.07-4.859.07-3.211 0-3.586-.015-4.859-.074-1.171-.061-1.816-.256-2.236-.421-.569-.224-.96-.479-1.379-.899-.421-.419-.69-.824-.9-1.38-.165-.42-.359-1.065-.42-2.235-.045-1.26-.061-1.649-.061-4.844 0-3.196.016-3.586.061-4.861.061-1.17.255-1.814.42-2.234.21-.57.479-.96.9-1.381.419-.419.81-.689 1.379-.898.42-.166 1.051-.361 2.221-.421 1.275-.045 1.65-.06 4.859-.06l.045.03zm0 3.678c-3.405 0-6.162 2.76-6.162 6.162 0 3.405 2.76 6.162 6.162 6.162 3.405 0 6.162-2.76 6.162-6.162 0-3.405-2.76-6.162-6.162-6.162zM12 16c-2.21 0-4-1.79-4-4s1.79-4 4-4 4 1.79 4 4-1.79 4-4 4zm7.846-10.405c0 .795-.646 1.44-1.44 1.44-.795 0-1.44-.646-1.44-1.44 0-.794.646-1.439 1.44-1.439.793-.001 1.44.645 1.44 1.439z" />
+                        </svg>
+                    </a>
+                    <!-- ---------------------TWITTER -->
+                    <a href="https://twitter.com/NicolasBatara" target="_blank"
+                        class="social hover:border-twitter  text-twitter">
+                        <svg role="img" width="30" class="fill-current" viewBox="0 0 24 24"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <title>Twitter</title>
+                            <path
+                                d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085 4.936 4.936 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0024 4.59z" />
+                        </svg>
+                    </a>
+
+                </div>
+
+                <p class="font-medium text-xs text-slate-800 dark:text-slate-400 text-center lg:text-sm"> Dibuat
+                    oleh <a href="https://facebook.com/nicolasbatara" target="_blank"
+                        class="font-bold text-primary dark:text-violet-500">Nicolas Batara</a>
+                    menggunakan
+                    <a href="https://tailwindcss.com" class="font-bold text-sky-500">Tailwind CSS</a>
+                </p>
+            </div>
+        </div>
+    </footer>
+    <!--------------------- Footer End ---------------------------->
+
+    <!--------------------- Back to Top  ---------------------------->
+    <div class="group">
+        <a href="#"
+            class="h-14 w-14 bg-primary hidden fixed bottom-7 p-4 right-7 z-[9999] rounded-full  items-center justify-center group-hover:animate-bounce"
+            id="to-top">
+            <span class=" block w-5 h-5 border-t-2 border-l-2 rotate-45 mt-2"></span>
+        </a>
+    </div>
+
+
+    <script src="dist/script.js"></script>
+</body>
+
+</html>
